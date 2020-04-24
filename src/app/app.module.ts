@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 ////////// Components //////////
 import { AppComponent } from './app.component';
-import { GeneralComponent } from './components/general/general.component';
+import { HomeComponent } from './components/home/home.component';
 import { PushButtonComponent } from './components/push-button/push-button.component';
 import { PulsationsComponent } from './components/pulsations/pulsations.component';
 ////////// Services //////////
@@ -18,7 +18,7 @@ import { ParameterComponent } from './components/parameter/parameter.component';
     AppComponent,
     PushButtonComponent,
     PulsationsComponent,
-    GeneralComponent,
+    HomeComponent,
     OtroComponent,
     ParameterComponent
   ],
