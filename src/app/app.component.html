@@ -1,28 +1,25 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
-    <img src="../assets/logo-angular.png" class="img-fluid" style="color:white;" alt="Logo">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pulsaciones</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Otro</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Parámetro</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <img src="../assets/logo-angular.png" class="img-fluid" style="color:white;" alt="Logo">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<router-outlet></router-outlet>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['home']">Pulsaciones</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['other']">Otro</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['parameter', 3]">Parámetro</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-<footer class="footer bg-dark rounded-top text-center">
-    <div class="container py-2">
-        <p class="text-white my-2">&copy;{{autor.nombre + ' ' + autor.apellido}}</p>
-    </div>
-</footer>
+<div class="container main-container">
+  <router-outlet></router-outlet>
+</div>
