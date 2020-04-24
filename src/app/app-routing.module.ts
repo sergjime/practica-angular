@@ -1,17 +1,20 @@
+import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PulsationsComponent } from './components/pulsations/pulsations.component';
-import { GeneralComponent } from './components/general/general.component';
+import { OtroComponent } from './components/otro/otro.component';
+import { ParameterComponent } from './components/parameter/parameter.component';
 
 
-const routes: Routes = [
-  {path: '', redirectTo: '/general', pathMatch: 'full'},
-  {path: 'general', component: GeneralComponent},
-  {path: 'pulsaciones', component: PulsationsComponent},
+const ROUTES: Routes = [
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: 'home', component: HomeComponent},
+  {path: 'other', component: OtroComponent},
+  {path: 'parameter/:parameter', component: ParameterComponent},
+  {path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(ROUTES, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
