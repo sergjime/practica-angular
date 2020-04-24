@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pulsations';
+  public autor: any = {nombre: 'Sergio', apellido: 'Jiménez'}
 }
